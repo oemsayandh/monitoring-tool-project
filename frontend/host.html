@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Host Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+    <h2>Host Dashboard</h2>
+
+    <div class="card">
+        <h3>Create Room</h3>
+        <input id="roomCode" placeholder="Room Code">
+        <input id="roomPass" placeholder="Room Password">
+        <button onclick="createRoom()">Create Room</button>
+        <p id="roomMsg"></p>
+    </div>
+
+    <div class="card">
+        <h3>All Users in Room</h3>
+        <button onclick="loadUsers()">Load Users</button>
+        <div id="userList"></div>
+    </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Host Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<h2>Host Dashboard</h2>
+
+<div class="box">
+    <h3>Your Room Code:</h3>
+    <p id="roomCode"></p>
+</div>
+
+<div class="box">
+    <h3>Connected Users</h3>
+    <ul id="userList"></ul>
+</div>
+
+<div class="box">
+    <h3>High Usage Alerts</h3>
+    <div id="alertBox"></div>
+</div>
+
+<script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+loadHostDashboard();
+</script>
+
+</body>
+</html>

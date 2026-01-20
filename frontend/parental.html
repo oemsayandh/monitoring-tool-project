@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parental Control</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Parental Control Settings</h2>
+
+    <div class="card">
+        <label>Enable Parental Control</label>
+        <select id="pcToggle">
+            <option value="false">Off</option>
+            <option value="true">On</option>
+        </select>
+
+        <input id="pcEmail" placeholder="Email for alerts">
+
+        <input id="pcCPU" placeholder="CPU threshold %" type="number">
+        <input id="pcRAM" placeholder="RAM threshold %" type="number">
+
+        <button onclick="saveParental()">Save Settings</button>
+        <p id="pcMsg"></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

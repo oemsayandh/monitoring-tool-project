@@ -1,0 +1,41 @@
+{
+  "version": 2,
+  "dgSpecHash": "yiCS8WoMq/I=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\dell\\Documents\\project structre\\main test\\agent\\agent.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dell\\.nuget\\packages\\newtonsoft.json\\13.0.4\\newtonsoft.json.13.0.4.nupkg.sha512",
+    "C:\\Users\\dell\\.nuget\\packages\\restsharp\\113.1.0\\restsharp.113.1.0.nupkg.sha512",
+    "C:\\Users\\dell\\.nuget\\packages\\system.diagnostics.performancecounter\\10.0.2\\system.diagnostics.performancecounter.10.0.2.nupkg.sha512",
+    "C:\\Users\\dell\\.nuget\\packages\\system.drawing.common\\10.0.2\\system.drawing.common.10.0.2.nupkg.sha512",
+    "C:\\Users\\dell\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\10.0.2\\microsoft.netcore.app.runtime.win-x64.10.0.2.nupkg.sha512",
+    "C:\\Users\\dell\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\10.0.2\\microsoft.windowsdesktop.app.runtime.win-x64.10.0.2.nupkg.sha512",
+    "C:\\Users\\dell\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\10.0.2\\microsoft.aspnetcore.app.runtime.win-x64.10.0.2.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1510",
+      "level": "Warning",
+      "message": "PackageReference System.Diagnostics.PerformanceCounter will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.",
+      "projectPath": "C:\\Users\\dell\\Documents\\project structre\\main test\\agent\\agent.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\dell\\Documents\\project structre\\main test\\agent\\agent.csproj",
+      "libraryId": "System.Diagnostics.PerformanceCounter",
+      "targetGraphs": [
+        "net10.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1510",
+      "level": "Warning",
+      "message": "PackageReference System.Drawing.Common will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.",
+      "projectPath": "C:\\Users\\dell\\Documents\\project structre\\main test\\agent\\agent.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\dell\\Documents\\project structre\\main test\\agent\\agent.csproj",
+      "libraryId": "System.Drawing.Common",
+      "targetGraphs": [
+        "net10.0-windows7.0"
+      ]
+    }
+  ]
+}

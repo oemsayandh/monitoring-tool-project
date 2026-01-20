@@ -1,0 +1,5 @@
+C:\Users\dell\Documents\project structre\main test\agent\obj\Release\net10.0\win-x64\agent.csproj.AssemblyReference.cache
+C:\Users\dell\Documents\project structre\main test\agent\obj\Release\net10.0\win-x64\agent.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dell\Documents\project structre\main test\agent\obj\Release\net10.0\win-x64\agent.AssemblyInfoInputs.cache
+C:\Users\dell\Documents\project structre\main test\agent\obj\Release\net10.0\win-x64\agent.AssemblyInfo.cs
+C:\Users\dell\Documents\project structre\main test\agent\obj\Release\net10.0\win-x64\agent.csproj.CoreCompileInputs.cache

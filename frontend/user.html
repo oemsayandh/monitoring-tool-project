@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h2>User Dashboard</h2>
+
+    <div class="card">
+        <h3>Join Host Room</h3>
+        <input id="joinCode" placeholder="Room Code">
+        <input id="joinPass" placeholder="Room Password">
+        <button onclick="joinRoom()">Join</button>
+        <p id="joinMsg"></p>
+    </div>
+
+    <div class="card">
+        <h3>Your Usage Stats</h3>
+        <button onclick="loadMyUsage()">Load Usage</button>
+        <div id="usageList"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<h2>Your System Usage</h2>
+
+<canvas id="cpuChart"></canvas>
+<canvas id="ramChart"></canvas>
+
+<div class="box">
+    <h3>Parental Control</h3>
+    <input type="checkbox" id="parentToggle" onchange="toggleParentControl()"> Enable
+    <input type="email" id="parentEmail" placeholder="Email for alerts" />
+</div>
+
+<script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+loadUserDashboard();
+</script>
+
+</body>
+</html>
+

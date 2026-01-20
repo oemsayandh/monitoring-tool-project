@@ -1,0 +1,8 @@
+{
+  "userId": "USER_ID_HERE",
+  "backendUrl": "http://localhost:5000",
+  "thresholdCPU": 80,
+  "thresholdRAM": 80,
+  "parentControl": false,
+  "email": ""
+}
