@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Host Dashboard</title>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Host Monitoring Dashboard</h1>
+
+<!-- ALERT -->
+<div id="alertBox" class="alert hidden">
+    ⚠ High usage detected!
+</div>
+
+<!-- TOP USER -->
+<h2>Highest Usage User</h2>
+<div id="topUser" class="card">No data</div>
+
+<!-- CHART -->
+<canvas id="cpuChart"></canvas>
+
+<!-- PARENTAL CONTROL -->
+<div class="card">
+    <h3>Parental Control</h3>
+    <label>
+        <input type="checkbox" id="parentalToggle">
+        Enable Parental Control
+    </label>
+    <br><br>
+    <input type="email" id="alertEmail" placeholder="Alert Email">
+    <br><br>
+    <button onclick="saveParental()">Save Settings</button>
+</div>
+
+<script src="host-dashboard.js"></script>
+</body>
+</html>
