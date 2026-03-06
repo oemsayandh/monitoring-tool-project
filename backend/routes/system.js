@@ -1,38 +1,60 @@
-import express from "express"; // Change require to import
+import express from "express";
+import { sendAlertEmail } from "../utils/mailer.js";
+import usageStore from "../memory/usageStore.js";
+import multer from "multer";
+import fs from "fs";
+
 const router = express.Router();
+const upload = multer({ dest: "uploads/" }); // Uploads folder
 
-// MANDATORY: Add the .js extension for your memory store
-import usageStore from "../memory/usageStore.js"; 
+router.post("/upload", upload.single("screenshot"), async (req, res) => {
+    const { userId, hostCode, cpu, ram, network, uptime, parentEmail } = req.body;
 
-router.post("/upload", async (req, res) => {
-    try {
-        const { userId, hostCode, cpu, ram, network, uptime } = req.body;
+    // Store usage data
+    usageStore.setUsage(userId, {
+        userId,
+        hostCode,
+        cpu,
+        ram,
+        network,
+        uptime,
+        time: new Date().toISOString()
+    });
 
-        // Save to your in-memory store
-        usageStore.setUsage(userId, {
-            userId,
-            hostCode,
-            cpu,
-            ram,
-            network,
-            uptime,
-            time: new Date().toISOString()
-        });
+    let anomaly = false;
 
-        console.log(`[${new Date().toLocaleTimeString()}] Updated usage for: ${userId} | CPU: ${cpu}% | RAM: ${ram}%`);
+    if (cpu > 70 || ram > 80) {
+        anomaly = true;
 
-        // Basic anomaly detection logic
-        let anomaly = false;
-        if (cpu > 70 || ram > 80) {
-            anomaly = true;
-            console.log(`⚠️ ANOMALY DETECTED for ${userId}`);
+        if (parentEmail) {
+            try {
+                // Send alert email with screenshot if exists
+                await sendAlertEmail(
+                    parentEmail,
+                    " High Usage Alert",
+                    `User ${userId} exceeded limits...\nCPU: ${cpu}%\nRAM: ${ram}%`,
+                    req.file ? req.file.path : null
+                );
+
+                console.log("Alert email sent");
+            } catch (err) {
+                console.error("Email failed:", err.message);
+            }
         }
-
-        res.json({ success: true, anomaly });
-    } catch (error) {
-        console.error("Error processing usage upload:", error);
-        res.status(500).json({ success: false, error: "Internal Server Error" });
     }
+
+    //  Clean uploaded file whether anomaly or not
+    if (req.file) {
+        try {
+            fs.unlinkSync(req.file.path);
+            console.log("Uploaded file deleted:", req.file.path);
+        } catch (err) {
+            console.error("Failed to delete uploaded file:", err.message);
+        }
+    }
+
+    // Send response
+    res.json({ success: true, anomaly });
 });
 
 export default router;
