@@ -1,6 +1,7 @@
 agent/bin/
 agent/obj/
 agent/*.exe
+node_modules/
 backend/node_modules/
 frontend/node_modules/
 frontend/public/*.exe
