@@ -1,0 +1,9 @@
+{
+  "userId": "69bf927b67f4f67cd2fe6e0c",
+  "hostCode": "ROOM123",
+  "backendUrl": "http://localhost:5000",
+  "thresholdCPU": 70,
+  "thresholdRAM": 80,
+  "parentControl": false,
+  "email": ""
+}

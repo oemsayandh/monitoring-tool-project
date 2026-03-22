@@ -1,0 +1,11 @@
+agent/bin/
+agent/obj/
+agent/*.exe
+backend/node_modules/
+frontend/node_modules/
+backend/.env
+backend/downloads/
+backend/uploads/
+agent-log.txt
+config.json
+*.exe
