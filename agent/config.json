@@ -1,8 +1,0 @@
-{
-  "userId": "",
-  "backendUrl": "http://localhost:5000",
-  "thresholdCPU": 80,
-  "thresholdRAM": 80,
-  "parentControl": false,
-  "email": ""
-}

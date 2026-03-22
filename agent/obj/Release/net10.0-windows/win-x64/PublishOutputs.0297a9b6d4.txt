@@ -1,2 +1,0 @@
-C:\Users\dell\Documents\project structre\main test\agent\bin\Release\net10.0-windows\win-x64\publish\agent.pdb
-C:\Users\dell\Documents\project structre\main test\agent\bin\Release\net10.0-windows\win-x64\publish\agent.exe
