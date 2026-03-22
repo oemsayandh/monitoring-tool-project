@@ -486,3 +486,6 @@ Parental mode from server: False
 [14:14:20] CPU:15.6% RAM:83.2% ↓0MB/s ↑0MB/s
 [14:15:20] CPU:12% RAM:83.4% ↓0MB/s ↑0MB/s
 [14:16:20] CPU:25.3% RAM:85.4% ↓0MB/s ↑0MB/s
+[14:17:20] CPU:17.2% RAM:86.5% ↓0MB/s ↑0MB/s
+[14:18:20] CPU:11.6% RAM:84.1% ↓0MB/s ↑0MB/s
+[14:19:20] CPU:15.3% RAM:86.4% ↓0MB/s ↑0MB/s
